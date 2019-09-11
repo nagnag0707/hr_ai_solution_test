@@ -76,44 +76,6 @@ print("適合率(Precsion):", '{:.2f}'.format(precision_score(Y_test, predict)*1
 print("再現率（Recall）:", '{:.2f}'.format(recall_score(Y_test, predict)*100),"%",  sep="")
 
 
-# In[196]:
-
-
-from matplotlib.colors import ListedColormap
-
-def plot_regions(clf, X, y):
-    """ モデルが学習した領域をプロット """
-    x1_min, x1_max = X[:, 0].min() - 1, X[:, 0].max() + 1
-    x2_min, x2_max = X[:, 1].min() - 1, X[:, 1].max() + 1
-
-    xx1, xx2 = np.meshgrid(np.arange(x1_min, x1_max, 0.3),
-                           np.arange(x2_min, x2_max, 0.3))
-
-    Z = clf.predict(np.array([xx1.ravel(), xx2.ravel()]).T)
-    Z = Z.reshape(xx1.shape)
-    plt.contourf(xx1, xx2, Z, alpha=0.4, cmap=ListedColormap(('red', 'blue')))
-
-    plt.xlim(xx1.min(), xx1.max())
-    plt.ylim(xx2.min(), xx2.max())
-
-    plt.scatter(x=X[y == 0, 0], y=X[y == 0, 1], alpha=0.8, c='red')
-    plt.scatter(x=X[y == 1, 0], y=X[y == 1, 1], alpha=0.8, c='blue')
-
-
-# In[197]:
-
-
-plot_regions(lr, X_train, Y_train);
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
 
 
 
