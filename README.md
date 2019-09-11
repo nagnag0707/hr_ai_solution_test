@@ -26,12 +26,17 @@ JupyterNotebook環境にプログラムを配置し設定値を各自変更の�
 
 設定値の詳細は以下
   CSV_PLACE = "./任意の場所.csv"
-  SAVE_PLACE = "./Data"
-  FILE_NAME = "Train_Data.csv" # "Test_Data.csv"
-  MEAN = 250  # 生成するテストデータの平均値
-  STD  = 48   # 生成するテストデータの標準偏差
-  RET  = 10   # 偏差値 / RET 分の 1の確率で退職させる
-  DEBUG = True # デバッグ用にデータを表示させるか
+  SAVE_PLACE = "./Data"  
+  # "Train_Data.csv"  "Test_Data.csv"
+  FILE_NAME = 上記コメントコピペ or 任意のファイル名
+  # 生成するテストデータの平均値
+  MEAN = 250  
+  # 生成するテストデータの標準偏差
+  STD  = 48  
+  # 偏差値 / RET 分の 1の確率で退職させる
+  RET  = 10   
+  # デバッグ用にデータを表示させるか
+  DEBUG = True 
 
 【test_sklearn.py】
 
@@ -43,6 +48,9 @@ JupyterNotebook環境にプログラムを配置し設定値を各自変更の�
 になります。プロットが必要な方はソースコードを各自追加して下さい。
 
 設定値の詳細は以下
-TR_CSV_PLACE = "./Data/Train_Data.csv"　# トレーニング用データのファイル格納場所
-RS_CSV_PLACE = "./Data/Test_Data.csv"   # テスト用データのファイル格納場所
-SAVE_MODEL = "./Data/LogisticModel.sav" # 学習モデルの保存先
+# トレーニング用データのファイル格納場所
+TR_CSV_PLACE = "./Data/Train_Data.csv"　
+# テスト用データのファイル格納場所
+RS_CSV_PLACE = "./Data/Test_Data.csv"   
+# 学習モデルの保存先
+SAVE_MODEL = "./Data/LogisticModel.sav" 
